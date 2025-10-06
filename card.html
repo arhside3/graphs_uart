@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="stylesheet" href="static/style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Душка</title>
+</head>
+<body>
+  <div class="dashboard" id="dashboard"></div>
+  
+  <!-- Три контейнера для трёх групп графиков -->
+  <div class="chart-container" id="chartGroup1">
+    <div class="chart-title">Параметры X, Y, Z</div>
+    <canvas id="chartXYZ"></canvas>
+    <div class="chart-legend" id="legendXYZ"></div>
+  </div>
+  
+  <div class="chart-container" id="chartGroup2">
+    <div class="chart-title">Акселерометр AX, AY, AZ</div>
+    <canvas id="chartAXYZ"></canvas>
+    <div class="chart-legend" id="legendAXYZ"></div>
+  </div>
+
+  <!-- Контейнер для трех SVG графиков координат -->
+  <div id="svgContainer">
+    <svg id="svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+      <g id="linesGroup"></g>
+    </svg>
+    <svg id="svgOnlyLines1" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+      <g id="linesGroupOnly1"></g>
+    </svg>
+    <svg id="svgOnlyLines2" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+      <g id="linesGroupOnly2"></g>
+    </svg>
+  </div>
+
+  <div id="connectionStatus" class="connection-status connected">Соединение установлено</div>
+
+<script src="static/app.js"></script>
+</body>
+</html>
